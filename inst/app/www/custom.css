@@ -1,0 +1,29 @@
+ .tile {
+    width: 62px;
+    height: 62px;
+    border: 1px solid;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    border-radius: 0;
+    margin-bottom: 15px;
+ }
+
+.wordle_row {
+    border: 1px solid;
+    padding: 10px;
+    margin: 5px;
+}
+
+.possible_words {
+    border: 1px solid;
+    padding: 5px;
+    height: 200px;
+    overflow: auto;
+}
