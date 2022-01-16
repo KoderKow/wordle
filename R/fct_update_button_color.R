@@ -6,11 +6,7 @@
 #'
 #' @noRd
 update_button_color <- function(rv, id, ns) {
-  print(paste0("Updating color for: ", id))
-
   letter_status <- stringr::str_c(id, "_status")
-
-  print(paste0("letter_status: ", letter_status))
 
   if (rv[[letter_status]] == "success") {
     rv[[letter_status]] <- "warning"
@@ -19,8 +15,6 @@ update_button_color <- function(rv, id, ns) {
   } else {
     rv[[letter_status]] <- "success"
   }
-
-  print(paste0("letter_status: ", rv[[letter_status]]))
 
   shinyBS::updateButton(
     session = getDefaultReactiveDomain(),

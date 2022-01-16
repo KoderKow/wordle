@@ -59,7 +59,7 @@ mod_wordle_row_ui <- function(id){
           )
         )
       ),
-      col_6(
+      col_3(
         tags$div(
           class = "possible_words",
           gt::gt_output(
@@ -230,9 +230,6 @@ mod_wordle_row_server <- function(id, r){
             ),
             r = r
           )
-
-        print(length(r$word_bank))
-        print(length(remaining_words$possible_words))
 
         r$word_bank <-
           possible_words <-

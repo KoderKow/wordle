@@ -22,7 +22,6 @@
 }
 
 .possible_words {
-    border: 1px solid;
     padding: 5px;
     height: 200px;
     overflow: auto;

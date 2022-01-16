@@ -72,7 +72,7 @@ reduce_word_bank <- function(word_guess, results, r) {
     purrr::set_names(word_bank)
 
   dim_scores <-
-    words_split %>%
+    words_splits %>%
     unlist() %>%
     table() %>%
     sort() %>%
@@ -106,7 +106,7 @@ reduce_word_bank <- function(word_guess, results, r) {
     gt::data_color(
       columns = score,
       colors = scales::col_quantile(
-        palette = c("#d600ff", "#bd00ff", "#001eff", "#00b8ff", "#00ff9f"),
+        palette = c("#ff6961", "#ffb347", "#fdfd96", "#77dd77"),
         domain = NULL
       )
     ) %>%

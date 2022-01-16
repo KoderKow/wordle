@@ -25,7 +25,7 @@ golem::fill_desc(
   author_first_name = "Kyle", # Your First Name
   author_last_name = "Harris", # Your Last Name
   author_email = "koderkow@gmail.com", # Your Email
-  repo_url = NULL # The URL of the GitHub Repo (optional)
+  repo_url = "https://github.com/KoderKow/wordle" # The URL of the GitHub Repo (optional)
 )
 
 ## Set {golem} options ----

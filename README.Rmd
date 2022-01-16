@@ -17,16 +17,21 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/KoderKow/wordle/workflows/R-CMD-check/badge.svg)](https://github.com/KoderKow/wordle/actions)
 <!-- badges: end -->
 
-The goal of wordle is to ...
+The goal of this project was an exercise to programmatically help solve daily wordle puzzles. I initially started building an algorithm to help solve the puzzle as quickly as possible. To make the algorithm easy to use and not boot up R everytime, I implemented my workflow into this shiny app. This was a fun app to code up!
+
+## App URL
+
+https://koderkow.shinyapps.io/wordle/
 
 ## Installation
 
 You can install the development version of wordle like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+remotes::install_github("koderkow/wordle")
 ```
 
 ## Code of Conduct

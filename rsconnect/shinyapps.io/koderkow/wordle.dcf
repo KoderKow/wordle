@@ -1,0 +1,13 @@
+name: wordle
+title: wordle
+username:
+account: koderkow
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5449443
+bundleId: 5473380
+url: https://koderkow.shinyapps.io/wordle/
+when: 1642321306.31113
+lastSyncTime: 1642321306.31113
+asMultiple: FALSE
+asStatic: FALSE
