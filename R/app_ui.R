@@ -9,13 +9,7 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
-    fluidPage(
-      mod_wordle_row_ui("wordle_row_ui_1"),
-      mod_wordle_row_ui("wordle_row_ui_2"),
-      mod_wordle_row_ui("wordle_row_ui_3"),
-      mod_wordle_row_ui("wordle_row_ui_4"),
-      mod_wordle_row_ui("wordle_row_ui_5")
-    )
+    dashboard_page()
   )
 }
 

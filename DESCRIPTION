@@ -1,19 +1,23 @@
 Package: wordle
 Title: Worlde Helper
 Version: 0.0.0.9000
-Authors@R: person('Kyle', 'Harris', email = 'koderkow@gmail.com', role = c('cre', 'aut'))
-Description: This is an R package dedicated to helping solve the daily wordle. I am working on this package to practice my problem solving using the R language and to build a whicked sweet dashboard.
+Authors@R: 
+    person("Kyle", "Harris", , "koderkow@gmail.com", role = c("cre", "aut"))
+Description: This is an R package dedicated to helping solve the daily
+    wordle. I am working on this package to practice my problem solving
+    using the R language and to build a whicked sweet dashboard.
 License: MIT + file LICENSE
-URL: https://github.com/KoderKow/wordle, https://koderkow.shinyapps.io/wordle/
+URL: https://github.com/KoderKow/wordle,
+    https://koderkow.shinyapps.io/wordle/
 BugReports: https://github.com/KoderKow/wordle/issues
 Depends: 
     R (>= 2.10)
 Imports: 
+    bs4Dash,
     config (>= 0.3.1),
     dplyr,
     golem (>= 0.3.1),
     gt,
-    pkgload,
     magrittr,
     purrr,
     scales,
@@ -21,8 +25,10 @@ Imports:
     shinyBS,
     shinyjs,
     stringr,
+    thematic,
     tibble
 Suggests: 
+    pkgload,
     processx,
     rlang,
     spelling,

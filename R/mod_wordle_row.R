@@ -49,12 +49,13 @@ mod_wordle_row_ui <- function(id){
           )
         ),
         fluidRow(
-          align = "center",
+          # align = "center",
           col_12(
             shinyBS::bsButton(
               inputId = ns("submit_results"),
               label = "Submit Results",
-              disabled = TRUE
+              disabled = TRUE,
+              class = "submit_button"
             )
           )
         )
@@ -78,7 +79,7 @@ mod_wordle_row_server <- function(id, r){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
     rv <- reactiveValues(
-      word_bank = word_bank,
+      # word_bank = word_bank,
       letter_1_status = "default",
       letter_2_status = "default",
       letter_3_status = "default",

@@ -5,6 +5,7 @@
 #' @import shiny
 #' @noRd
 app_server <- function( input, output, session ) {
+  bs4Dash::useAutoColor()
   # Reactive Values ----
   r <- reactiveValues(
     word_bank = word_bank

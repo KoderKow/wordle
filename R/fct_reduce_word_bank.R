@@ -100,13 +100,21 @@ reduce_word_bank <- function(word_guess, results, r) {
     ) %>%
     dplyr::arrange(dplyr::desc(score))
 
+  gt_palette <- dplyr::case_when(
+    nrow(d) >= 4 ~ list(c("#ff6961", "#ffb347", "#fdfd96", "#77dd77")),
+    nrow(d) == 3 ~ list(c("#ff6961", "#ffb347", "#77dd77")),
+    nrow(d) == 2 ~ list(c("#ff6961", "#77dd77")),
+    TRUE ~ list("#77dd77")
+  ) %>%
+    unlist()
+
   gt <-
     d %>%
     gt::gt() %>%
     gt::data_color(
       columns = score,
-      colors = scales::col_quantile(
-        palette = c("#ff6961", "#ffb347", "#fdfd96", "#77dd77"),
+      colors = scales::col_numeric(
+        palette = gt_palette,
         domain = NULL
       )
     ) %>%
