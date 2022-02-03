@@ -884,13 +884,6 @@
       "Repository": "CRAN",
       "Hash": "a376b424c4817cda4920bbbeb3364e85"
     },
-    "words": {
-      "Package": "words",
-      "Version": "1.0.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "40aba94676381496e496ac769c7689a2"
-    },
     "xfun": {
       "Package": "xfun",
       "Version": "0.29",
