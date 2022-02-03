@@ -28,6 +28,7 @@ Imports:
     thematic,
     tibble
 Suggests: 
+    glue,
     pkgload,
     processx,
     rlang,
