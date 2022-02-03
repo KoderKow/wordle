@@ -1,6 +1,6 @@
 Package: wordle
 Title: Worlde Helper
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Kyle", "Harris", , "koderkow@gmail.com", role = c("cre", "aut"))
 Description: This is an R package dedicated to helping solve the daily
