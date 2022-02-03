@@ -3,17 +3,19 @@
 \docType{data}
 \name{word_bank}
 \alias{word_bank}
-\title{Vector of 5 letter words}
+\title{Vector of all 5 letter words
+Combined two word lists gathered from GitHub user *cfreshman*.}
 \format{
-An object of class \code{character} of length 9330.
+An object of class \code{character} of length 12972.
 }
 \source{
-\url{https://github.com/cran/words}
+\url{https://gist.github.com/cfreshman}
 }
 \usage{
 word_bank
 }
 \description{
-Vector that was obtained and filtered from the {words} package.
+Vector of all 5 letter words
+Combined two word lists gathered from GitHub user *cfreshman*.
 }
 \keyword{datasets}
