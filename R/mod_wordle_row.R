@@ -22,6 +22,7 @@ mod_wordle_row_ui <- function(id){
         ),
         fluidRow(
           align = "center",
+          class = "letter_row",
           shinyBS::bsButton(
             inputId = ns("letter_1"),
             label = "",

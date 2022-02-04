@@ -1,6 +1,6 @@
 Package: wordle
 Title: Worlde Helper
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
     person("Kyle", "Harris", , "koderkow@gmail.com", role = c("cre", "aut"))
 Description: This is an R package dedicated to helping solve the daily
@@ -19,6 +19,7 @@ Imports:
     golem (>= 0.3.1),
     gt,
     magrittr,
+    pkgload,
     purrr,
     scales,
     shiny (>= 1.7.1),
@@ -28,8 +29,6 @@ Imports:
     thematic,
     tibble
 Suggests: 
-    glue,
-    pkgload,
     processx,
     rlang,
     spelling,

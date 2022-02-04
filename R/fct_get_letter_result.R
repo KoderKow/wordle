@@ -6,7 +6,7 @@
 #'
 #' @noRd
 get_letter_result <- function (letter_status) {
-  print(letter_status)
+  # print(letter_status)
   if (letter_status == "success") {
     result <- 1
   } else if (letter_status == "warning") {

@@ -9,7 +9,7 @@ dashboard_sidebar <- function() {
       id = "sidebar",
       bs4Dash::menuItem(
         tabName = "tab_1",
-        text = "Wordle Helper",
+        text = paste0("Wordle Helper v", pkgload::pkg_version()),
         icon = icon("file-word")
       ),
       tags$br(),

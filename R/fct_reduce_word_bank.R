@@ -80,7 +80,11 @@ reduce_word_bank <- function(word_guess, results, r) {
       name = "letter",
       value = "count"
     ) %>%
-    dplyr::mutate(score = dplyr::row_number()) %>%
+    dplyr::group_by(count) %>%
+    dplyr::mutate(
+      score = dplyr::cur_group_id()
+    ) %>%
+    dplyr::ungroup(count) %>%
     dplyr::select(-count)
 
   d <-
@@ -98,12 +102,31 @@ reduce_word_bank <- function(word_guess, results, r) {
     dplyr::summarize(
       score = sum(score)
     ) %>%
+    dplyr::mutate(
+      word = ifelse(
+        test = word %in% wordle_answers,
+        yes = paste0(word, "*"),
+        no = word
+      ),
+      score = (score - min(score)) / (max(score) - min(score)),
+      score = ceiling(score * 100),
+      score = ifelse(
+        test = is.nan(score),
+        yes = 100,
+        no = score
+      )
+    ) %>%
     dplyr::arrange(dplyr::desc(score))
 
+  d_rows <-
+    d %>%
+    dplyr::select(-word) %>%
+    dplyr::distinct()
+
   gt_palette <- dplyr::case_when(
-    nrow(d) >= 4 ~ list(c("#ff6961", "#ffb347", "#fdfd96", "#77dd77")),
-    nrow(d) == 3 ~ list(c("#ff6961", "#ffb347", "#77dd77")),
-    nrow(d) == 2 ~ list(c("#ff6961", "#77dd77")),
+    nrow(d_rows) >= 4 ~ list(c("#ff6961", "#ffb347", "#fdfd96", "#77dd77")),
+    nrow(d_rows) == 3 ~ list(c("#ff6961", "#ffb347", "#77dd77")),
+    nrow(d_rows) == 2 ~ list(c("#ff6961", "#77dd77")),
     TRUE ~ list("#77dd77")
   ) %>%
     unlist()
@@ -127,8 +150,6 @@ reduce_word_bank <- function(word_guess, results, r) {
     possible_words = word_bank,
     gt = gt
   )
-
-  print("~ Done!")
 
   return(return_list)
 }

@@ -1,3 +1,10 @@
+# wordle 0.1.2
+
+- Scaled the scores 0 - 100
+- Added an asterisk to the words that are acceptable answers
+- Added package version to tab name
+- Improve CSS margins around letter boxes
+
 # wordle 0.1.1
 
 - Removed the word list obtained from the {words} package
